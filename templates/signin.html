@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="SpicyChicken">
+        <meta name="generator" content="Jekyll v3.8.5">
+
+        <title>Sign in - SpicyChicken's Playground</title>
+
+        <!--Bootstrap css link-->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+        <!--Custom link-->
+        <link rel="stylesheet" href="/static/css/background.css" />
+        <link rel="stylesheet" href="/static/css/signin.css" />
+        <link rel="icon" href="/static/src/logo.ico" type="image/x-icon" />
+
+    </head>
+
+    <body class="text-center" data-gr-c-s-loaded="true">
+        <div class="background" style="background-image: url(/static/src/background.jpg);"></div>
+
+        <form class="form-signin">
+            <img class="mb-4" src="/static/src/logo.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" 
+                id="inputEmail" class="form-control" 
+                placeholder="Email address" name="email"
+                required="" autofocus=""
+            >
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" 
+                id="inputPassword" class="form-control" 
+                placeholder="Password", name="password" 
+                required=""
+            >
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" 
+                        value="remember-me"
+                        name="rm"
+                    > Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" >Sign in</button>
+            <label id="response"></label>
+            <p class="mt-5 mb-3 text-muted">SpicyChicken 2019</p>
+        </form>
+
+        <!--js link-->
+        <script src="/static/js/jquery-3.3.1.min.js"></script>
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        
+    </body>
+
+</html>
