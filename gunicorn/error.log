@@ -1,0 +1,7 @@
+[2019-05-30 10:09:10 +0800] [958] [INFO] Starting gunicorn 19.9.0
+[2019-05-30 10:09:10 +0800] [958] [INFO] Listening at: http://0.0.0.0:23333 (958)
+[2019-05-30 10:09:10 +0800] [958] [INFO] Using worker: sync
+[2019-05-30 10:09:10 +0800] [961] [INFO] Booting worker with pid: 961
+[2019-05-30 10:11:25 +0800] [958] [CRITICAL] WORKER TIMEOUT (pid:961)
+[2019-05-30 10:11:25 +0800] [961] [INFO] Worker exiting (pid: 961)
+[2019-05-30 10:11:26 +0800] [981] [INFO] Booting worker with pid: 981
