@@ -30,10 +30,19 @@ class Player:
         else:
             return False
     
+    def win(self):
+        self.chips += self.bets
+        self.bets = 0
+
     def command_1(self, hand_index):
-        add_bet_allow = chips > 0
-        split_allow = (hands[hand_index])
-        input("")
+        add_bet_allow = self.chips > 0
+        split_allow = (self.hands[hand_index])
+        command = input(
+            "1.surrender, 2.add_bet:{0}, 3:split:{1}".format(
+                add_bet_allow, split_allow
+            )
+        )
+        return command
 
     def show_hands(self, check=False):
         for hand_index, hand in enumerate(self.hands):

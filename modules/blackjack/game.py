@@ -32,7 +32,16 @@ def game():
         card = deck.deal().flip()
         dealer.deal(card)
         for player in players:
-            player.command()
+            command = player.command_1()
+            if command == 1:
+                pass
+            elif command == 2:
+                pass
+            elif command == 3:
+                pass
+            else:
+                pass
+            
 
 
     
