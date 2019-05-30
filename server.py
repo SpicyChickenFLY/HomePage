@@ -16,6 +16,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 
+"""------App route for website------"""
 
 @app.route('/', methods=['GET', 'POST'])
 def website():
@@ -52,6 +53,12 @@ def sign_in():
 @app.route('/auth/signout/', methods=['POST'])
 def sign_out():
     pass
+
+"""------App route for client------"""
+@app.route('/blackjack', methods=['POST'])
+def blackjack():
+    pass
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='2333', debug=True)
