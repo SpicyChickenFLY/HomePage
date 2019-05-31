@@ -34,6 +34,9 @@ class Player:
         self.chips += self.bets
         self.bets = 0
 
+    def lose(self):
+        self.bets = 0
+
     def command_1(self, hand_index):
         add_bet_allow = self.chips > 0
         split_allow = (self.hands[hand_index])
@@ -43,6 +46,9 @@ class Player:
             )
         )
         return command
+
+    def command_2(self):
+        pass
 
     def show_hands(self, check=False):
         for hand_index, hand in enumerate(self.hands):

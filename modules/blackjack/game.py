@@ -32,15 +32,20 @@ def game():
         card = deck.deal().flip()
         dealer.deal(card)
         for player in players:
-            command = player.command_1()
-            if command == 1:
-                pass
-            elif command == 2:
-                pass
-            elif command == 3:
-                pass
-            else:
-                pass
+            for hand_index in range(len(player.hands)):
+                command = player.command_1(hand_index)
+                if command == 1:
+                    player.lose()
+                    dropped_hand = player.drop_hand()
+                    for card in dropped_hand:
+                        deck.drop(card)
+                        continue
+                elif command == 2:
+                    pass
+                elif command == 3:
+                    pass
+                else:
+                    pass
             
 
 
