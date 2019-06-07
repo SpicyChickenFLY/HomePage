@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="SpicyChicken">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <title>SpicyChicken's Playground</title>
+
+    <!--Bootstrap css link-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <!--Custom link-->
+    <link rel="stylesheet" href="/static/css/background.css" />
+    <link rel="stylesheet" href="/static/css/bloglist.css" />
+    <link rel="icon" href="/static/src/logo.ico" type="image/x-icon" />
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="background" style="background-image: url(/static/src/background.jpg);"></div>
+
+    <div class="container-total">
+        <div class="container">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4 text-center">
+                        <a class="blog-header-logo text-dark" href="#">SpicyChicken's Blog</a>
+                    </div>
+                </div>
+            </header>
+        
+            <div class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex justify-content-between">
+                    <a class="p-2 text-muted" href="#">全部</a>
+                    <a class="p-2 text-muted" href="#">生活</a>
+                    <a class="p-2 text-muted" href="#">技术</a>
+                    <a class="p-2 text-muted" href="#">其他</a>
+                </nav>
+            </div>
+        
+            <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 font-italic">SpicyChicken:</h1>
+                    <p class="lead my-3">不喜欢玩游戏，和咸鱼有什么区别</p>
+                </div>
+            </div>
+        
+        </div>
+
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <h3 class="pb-4 mb-4 font-italic border-bottom">
+                        博客总览
+                    </h3>
+                    {% for blog in blog_list %} 
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">{{blog["name"]}}</h2>
+                        <p class="blog-post-meta">
+                            {{blog["create_time"]}} by <a href="#">{{blog["author"]}}</a>, 
+                            index: <span id="id">{{blog["id"]}}</span>
+                        </p>
+                        <p>{{blog["description"]}}</p>
+                    </div><!-- /.blog-post -->
+                    {% endfor %}
+
+                    
+        
+                    <nav class="blog-pagination">
+                        <a class="btn btn-outline-primary" href="#">Older</a>
+                        <a class="btn btn-outline-secondary disabled" href="#"
+                            tabindex="-1" aria-disabled="true">Newer</a>
+                    </nav>
+        
+                </div><!-- /.blog-main -->
+        
+                <aside class="col-md-4 blog-sidebar">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="font-italic">About</h4>
+                        <p class="mb-0">好像没什么好说的</p>
+                    </div>
+        
+                    <div class="p-4">
+                        <h4 class="font-italic">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">June 2019</a></li>
+
+                        </ol>
+                    </div>
+        
+                    <div class="p-4">
+                        <h4 class="font-italic">Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                        </ol>
+                    </div>
+                </aside><!-- /.blog-sidebar -->
+        
+            </div><!-- /.row -->
+        
+        </main><!-- /.container -->
+
+    </div>
+
+    
+    
+
+    <!--js link-->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bloglist.js"></script>
+
+</body>
+
+</html>
