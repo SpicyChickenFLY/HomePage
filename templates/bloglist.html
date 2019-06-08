@@ -57,6 +57,7 @@
                     <h3 class="pb-4 mb-4 font-italic border-bottom">
                         博客总览
                     </h3>
+                    
                     {% for blog in blog_list %} 
                     <div class="blog-post">
                         <h2 class="blog-post-title">{{blog["name"]}}</h2>
@@ -66,9 +67,7 @@
                         </p>
                         <p>{{blog["description"]}}</p>
                     </div><!-- /.blog-post -->
-                    {% endfor %}
-
-                    
+                    {% endfor %} 
         
                     <nav class="blog-pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
@@ -88,7 +87,6 @@
                         <h4 class="font-italic">Archives</h4>
                         <ol class="list-unstyled mb-0">
                             <li><a href="#">June 2019</a></li>
-
                         </ol>
                     </div>
         
@@ -105,9 +103,6 @@
         </main><!-- /.container -->
 
     </div>
-
-    
-    
 
     <!--js link-->
     <script src="/static/js/jquery-3.3.1.min.js"></script>
