@@ -1,10 +1,12 @@
 from flask import Flask, request, render_template, flash, Markup
 from flask_login import LoginManager
+# from flaskext.markdown import Markdown
 from flask_wtf import FlaskForm
+
 from wtforms import Form, BooleanField, StringField
 from wtforms.validators import DataRequired
 
-from markdown import markdown
+# from markdown import markdown
 import os
 import json
 import time
@@ -12,6 +14,11 @@ import time
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "chow"
+# Markdown(
+#     app,
+#     extensions=[''],
+#     extension_configs={''}
+# ) 
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -38,9 +45,9 @@ def blog_list():
 def blog(blog_id):
     with open("static/blog/" + str(blog_id).zfill(5) + ".md",'r', encoding='utf-8-sig') as f:
         markdown_content = f.read()
-    print(markdown_content)
-    html_contents = Markup(markdown(markdown_content))
-    return render_template("blog.html", content=html_contents)
+    # print(markdown_content)
+    # html_content = Markup(markdown(markdown_content))
+    return render_template("blog.html", content=markdown_content)
 
 """Account Operation"""
 
