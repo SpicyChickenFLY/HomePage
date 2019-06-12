@@ -16,10 +16,17 @@
         },
         {
             "id": "00003",
-            "name": "论文阅读（一）",
+            "name": "论文阅读（一）:Reading SceneText With Fully Convolutional Sequence Modeling",
             "author": "SpicyChicken",
             "create_time": "2019-06-11",
-            "description": "。。"
+            "description": "老师要求阅读的一篇期刊论文，他介绍了仅使用卷积网络和CTC进行文本序列识别的例子"
+        },
+        {
+            "id": "00004",
+            "name": "论文阅读（二）:Intelligent Character Recognition Using Fully Convolutional Neural",
+            "author": "SpicyChicken",
+            "create_time": "2019-06-12",
+            "description": "老师要求阅读的另一篇期刊论文，太水了，不太想介绍"
         }
     ]
 }
