@@ -41,6 +41,13 @@ def blog_list():
         blog_list = reversed(json.load(f)["blog"])
     return render_template("bloglist.html", blog_list=blog_list)
 
+@app.route('/blog/create/', methods=['GET', 'POST'])
+def blog_create(): 
+    if request.method == 'GET':
+        return render_template("blogcreate.html")
+    else:
+        pass
+
 @app.route('/blog/<int:blog_id>/')
 def blog(blog_id):
     with open("static/blog/" + str(blog_id).zfill(5) + ".md",'r', encoding='utf-8-sig') as f:
