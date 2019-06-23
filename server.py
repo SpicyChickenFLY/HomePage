@@ -58,7 +58,10 @@ def blog(blog_id):
 
 @app.route('/dashboard/', methods=['GET', 'POST'])
 def dashboard():
-    return render_template("dashboard.html")
+    if request.method == 'GET':
+        return render_template("dashboard.html")
+    else:
+        return render_template("dashboard.html")
 
 """Account Operation"""
 
