@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, flash, Markup
-from flask_login import LoginManager
+# from flask_login import LoginManager
 # from flaskext.markdown import Markdown
 from flask_wtf import FlaskForm
 
@@ -20,8 +20,8 @@ app.config["SECRET_KEY"] = "chow"
 #     extension_configs={''}
 # ) 
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+# login_manager = LoginManager()
+# login_manager.init_app(app)
 
 """------App route for website------"""
 
