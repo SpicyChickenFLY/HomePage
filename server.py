@@ -56,6 +56,13 @@ def blog(blog_id):
     # html_content = Markup(markdown(markdown_content))
     return render_template("blog.html", content=markdown_content)
 
+@app.route('/dashboard/', methods=['GET', 'POST'])
+def dashboard():
+    if request.method == 'GET':
+        return render_template("dashboard.html")
+    else:
+        return render_template("dashboard.html")
+
 """Account Operation"""
 
 @app.route('/auth/signup/', methods=['POST'])
@@ -73,9 +80,6 @@ def sign_in():
         print(request.data)
         form = LoginForm()
         if form.validate_on_submit():
-            # Login and validate the user.
-            # user should be an instance of your `User` class
-            login_user(user)
             return render_template("home.html")
         else:
             return render_template("signin.html")
