@@ -60,7 +60,7 @@
                     
                     {% for blog in blog_list %} 
                     <div class="blog-post">
-                        <h2 class="blog-post-title">{{blog["name"]}}</h2>
+                        <h4 class="blog-post-title">{{blog["name"]}}</h4>
                         <p class="blog-post-meta">
                             {{blog["create_time"]}} by <a href="/home/">{{blog["author"]}}</a>, 
                             index: <span id="id">{{blog["id"]}}</span>
