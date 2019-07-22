@@ -2,7 +2,10 @@ from flask import Flask, request, render_template, flash, Markup
 # from flask_login import LoginManager
 # from flaskext.markdown import Markdown
 from flask_wtf import FlaskForm
+<<<<<<< HEAD
 from flask_mongoengine import MongoEngine
+=======
+>>>>>>> 8080ed28d158d95bd2c083a5681dd5c41b50119c
 from wtforms import Form, BooleanField, StringField
 from wtforms.validators import DataRequired
 from flask_debugtoolbar import DebugToolbarExtension
@@ -14,7 +17,9 @@ import time
 
 
 app = Flask(__name__)
+# app.debug = True # toolbar debug
 app.config["SECRET_KEY"] = "chow"
+<<<<<<< HEAD
 app.config['MONGODB_SETTINGS'] = {
     'db': 'blog',
     'host': 'mongodb://localhost/blog',
@@ -24,6 +29,11 @@ app.config['DEBUG_TB_PANELS'] = ['flask_mongoengine.panels.MongoDebugPanel']
 
 db = MongoEngine(app)
 toolbar = DebugToolbarExtension(app)
+=======
+
+
+# toolbar = DebugToolbarExtension(app)
+>>>>>>> 8080ed28d158d95bd2c083a5681dd5c41b50119c
 # login_manager = LoginManager()
 # login_manager.init_app(app)
 
