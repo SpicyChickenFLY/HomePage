@@ -128,3 +128,6 @@ dmypy.json
 
 # blog content
 static/blog/
+
+# html sample
+sample/
